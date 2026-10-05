@@ -334,3 +334,42 @@ footer {
         padding: 60px 6%;
     }
 }
+
+
+.result-highlights {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin: 20px 0 18px;
+}
+
+.result-highlights div {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.result-highlights strong {
+    display: block;
+    font-size: 1.15rem;
+    color: #0f5132;
+    margin-bottom: 4px;
+}
+
+.result-highlights span {
+    display: block;
+    font-size: 0.88rem;
+    color: #4b5563;
+}
+
+.hydrogen-project .project-label {
+    color: #166534;
+    background: #ecfdf5;
+}
+
+@media (max-width: 800px) {
+    .result-highlights {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
