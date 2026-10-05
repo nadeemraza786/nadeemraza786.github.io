@@ -373,3 +373,9 @@ footer {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
+
+
+.greenhouse-project .project-label {
+    color: #166534;
+    background: #ecfdf5;
+}
