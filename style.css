@@ -148,19 +148,52 @@ body {
 .project-card {
     background: #f9fafb;
     border: 1px solid #e5e7eb;
-    border-radius: 12px;
+    border-radius: 14px;
     padding: 28px;
     transition: 0.2s;
+    overflow: hidden;
 }
 
 .project-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.featured-project {
+    grid-column: 1 / -1;
+    padding: 0;
+    background: white;
+}
+
+.project-cover {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.project-content {
+    padding: 30px;
+}
+
+.project-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #1d4ed8;
+    background: #eff6ff;
+    border-radius: 999px;
+    padding: 6px 11px;
 }
 
 .project-card h3 {
     margin-bottom: 14px;
     font-size: 1.35rem;
+}
+
+.featured-project h3 {
+    font-size: 1.65rem;
 }
 
 .project-card p {
@@ -177,6 +210,62 @@ body {
     text-decoration: none;
     color: #2563eb;
     font-weight: 600;
+}
+
+.project-actions {
+    margin-top: 18px;
+    margin-bottom: 20px;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 1px solid #2563eb;
+    border-radius: 7px;
+}
+
+.project-link:hover {
+    background: #eff6ff;
+}
+
+.technical-results {
+    margin-top: 22px;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 18px;
+}
+
+.technical-results summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: #1f2937;
+    padding: 4px 0;
+}
+
+.results-grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.results-grid figure {
+    margin: 0;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.results-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.results-grid figcaption {
+    padding: 12px 14px;
+    color: #4b5563;
+    font-size: 0.9rem;
 }
 
 .skills {
@@ -236,7 +325,12 @@ footer {
         font-size: 1.5rem;
     }
 
-    .project-grid {
+    .project-grid,
+    .results-grid {
         grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 60px 6%;
     }
 }
